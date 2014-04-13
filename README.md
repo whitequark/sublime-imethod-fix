@@ -7,6 +7,14 @@ This library fixes an annoying bug in [Sublime Text][st] where it ignores
 [st]: http://sublimetext.com
 [XCompose]: https://wiki.edubuntu.org/ComposeKey
 
+Ubuntu instructions
+-------------------
+
+Add the [sublime-imethod-fix PPA][ppa] to your APT sources. Install
+the `libsublime_text-xim-xcompose` package.
+
+[ppa]: https://launchpad.net/~whitequark/+archive/sublime-imethod-fix/+packages
+
 Building
 --------
 
