@@ -1,20 +1,23 @@
-DESTDIR = /opt/sublime_text/
+SUBLIME = $(DESTDIR)/opt/sublime_text/
 
-all: libsublime-immethod-fix.so
+all: libsublime_text-xim-xcompose.so
 
-libsublime-immethod-fix.so: libsublime-immethod-fix.c
+libsublime_text-xim-xcompose.so: libsublime_text-xim-xcompose.c
 	$(CC) -Wall -Werror -fPIC -shared -ldl `pkg-config gtk+-2.0 --cflags --libs` $^ -o $@
 
 clean:
 	rm -f *.so
 
 install:
-	install -m644 -t $(DESTDIR) libsublime-immethod-fix.so
+	install -d $(SUBLIME)
+	install -m644 -t $(SUBLIME) libsublime_text-xim-xcompose.so
+	install -m755 sublime_text $(SUBLIME)/sublime_text.wrapper
 
-fix: install
-	mv $(DESTDIR)/sublime_text $(DESTDIR)/sublime_text.orig
-	install -m755 -t $(DESTDIR) sublime_text
+fix:
+	install -m644 -t $(SUBLIME) libsublime_text-xim-xcompose.so
+	mv $(SUBLIME)/sublime_text $(SUBLIME)/sublime_text.orig
+	install -m755 -t $(SUBLIME) sublime_text
 
 unfix:
-	mv $(DESTDIR)/sublime_text.orig $(DESTDIR)/sublime_text
-	rm -f $(DESTDIR)/libsublime-immethod-fix.so
+	mv $(SUBLIME)/sublime_text.orig $(SUBLIME)/sublime_text
+	rm -f $(SUBLIME)/libsublime_text-xim-xcompose.so

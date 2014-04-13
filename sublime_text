@@ -1,4 +1,4 @@
 #!/bin/sh
 
-export LD_PRELOAD=$(dirname $0)/libsublime-immethod-fix.so
+export LD_PRELOAD=$(dirname $0)/libsublime_text-xim-xcompose.so
 exec $(dirname $0)/sublime_text.orig "$@"

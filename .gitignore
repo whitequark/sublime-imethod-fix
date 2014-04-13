@@ -1,1 +1,5 @@
 *.so
+debian/libsublime-text-xim-xcompose
+debian/*.log
+debian/*.substvars
+debian/files
