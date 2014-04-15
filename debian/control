@@ -21,6 +21,8 @@ Package: libsublime-text-3-xim-xcompose
 Section: libs
 Architecture: any
 Depends: sublime-text (>= 3), ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libsublime-text-xim-xcompose
+Replaces: libsublime-text-xim-xcompose
 Description: XCompose support in Sublime Text
  Sublime Text has a bug where using it with GTK input method set
  to xim ignores any configured XCompose combinations. This package
