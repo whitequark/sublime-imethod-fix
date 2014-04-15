@@ -11,7 +11,8 @@ Ubuntu instructions
 -------------------
 
 Add the [sublime-imethod-fix PPA][ppa] to your APT sources. Install
-the `libsublime_text-xim-xcompose` package.
+the `libsublime-text-2-xim-xcompose` or `libsublime-text-3-xim-xcompose` package,
+depending on your Sublime Text version.
 
 [ppa]: https://launchpad.net/~whitequark/+archive/sublime-imethod-fix/+packages
 
