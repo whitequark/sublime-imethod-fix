@@ -1,3 +1,10 @@
+sublime-imethod-fix (1.1.1) precise; urgency=medium
+
+  * Add proper Conflicts/Replaces dependencies.
+  * Force GTK IM module to XIM in the Sublime Text launcher wrapper.
+
+ -- Peter Zotov <whitequark@whitequark.org>  Tue, 15 Apr 2014 06:55:03 +0400
+
 sublime-imethod-fix (1.1.0) precise; urgency=medium
 
   * Add support for Sublime Text 2.
