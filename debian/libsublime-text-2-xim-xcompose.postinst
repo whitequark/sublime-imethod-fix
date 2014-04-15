@@ -20,12 +20,12 @@ set -e
 
 case "$1" in
     configure)
-    dpkg-divert --package libsublime_text-xim-xcompose \
-        --divert /opt/sublime_text/sublime_text.orig \
-        --rename \
-        --add /opt/sublime_text/sublime_text
-    ln -sf /opt/sublime_text/sublime_text.wrapper \
-        /opt/sublime_text/sublime_text
+        dpkg-divert --package libsublime_text-xim-xcompose \
+            --divert /opt/sublime_text_2/sublime_text.orig \
+            --rename \
+            --add /opt/sublime_text_2/sublime_text
+        ln -sf /opt/sublime_text_2/sublime_text.wrapper \
+            /opt/sublime_text_2/sublime_text
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

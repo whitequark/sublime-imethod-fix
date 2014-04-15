@@ -8,10 +8,19 @@ Homepage: https://github.com/whitequark/sublime-imethod-fix
 Vcs-Git: https://github.com/whitequark/sublime-imethod-fix.git
 Vcs-Browser: https://github.com/whitequark/sublime-imethod-fix
 
-Package: libsublime-text-xim-xcompose
+Package: libsublime-text-2-xim-xcompose
 Section: libs
 Architecture: any
-Depends: sublime-text, ${shlibs:Depends}, ${misc:Depends}
+Depends: sublime-text (>= 2), sublime-text (<< 3), ${shlibs:Depends}, ${misc:Depends}
+Description: XCompose support in Sublime Text
+ Sublime Text has a bug where using it with GTK input method set
+ to xim ignores any configured XCompose combinations. This package
+ provides a library that works around the bug.
+
+Package: libsublime-text-3-xim-xcompose
+Section: libs
+Architecture: any
+Depends: sublime-text (>= 3), ${shlibs:Depends}, ${misc:Depends}
 Description: XCompose support in Sublime Text
  Sublime Text has a bug where using it with GTK input method set
  to xim ignores any configured XCompose combinations. This package

@@ -19,11 +19,13 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-    [ -h /opt/sublime_text/sublime_text ] && rm /opt/sublime_text/sublime_text
-    dpkg-divert --package libsublime_text-xim-xcompose \
-        --divert /opt/sublime_text/sublime_text.orig \
-        --rename \
-        --remove /opt/sublime_text/sublime_text
+        [ -h /opt/sublime_text/sublime_text ] &&
+            rm /opt/sublime_text/sublime_text
+
+        dpkg-divert --package libsublime_text-xim-xcompose \
+            --divert /opt/sublime_text/sublime_text.orig \
+            --rename \
+            --remove /opt/sublime_text/sublime_text
     ;;
 
     failed-upgrade)
