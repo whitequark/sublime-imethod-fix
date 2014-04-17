@@ -31,8 +31,6 @@ Installation
 Usage
 -----
 
-Make sure your GTK input method is set to `xim`, e.g. with `export GTK_IM_METHOD=xim`.
-
     $ subl
 
 Uninstallation
