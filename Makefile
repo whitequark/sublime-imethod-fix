@@ -3,7 +3,7 @@ SUBLIME = $(DESTDIR)/opt/sublime_text$(SUFFIX)/
 all: libsublime_text-xim-xcompose.so
 
 libsublime_text-xim-xcompose.so: libsublime_text-xim-xcompose.c
-	$(CC) -Wall -Werror -fPIC -shared -ldl `pkg-config gtk+-2.0 --cflags --libs` $^ -o $@
+	$(CC) -Wall -Werror -Wl,--no-as-needed -fPIC -shared -ldl `pkg-config gtk+-2.0 --cflags --libs` $^ -o $@
 
 clean:
 	rm -f *.so

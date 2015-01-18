@@ -1,3 +1,15 @@
+sublime-imethod-fix (1.1.2~utopic) utopic; urgency=medium
+
+  * Pass --no-as-needed to ld, as Ubuntu builds with --as-needed by default.
+
+ -- Peter Zotov <whitequark@whitequark.org>  Sun, 18 Jan 2015 04:49:46 +0300
+
+sublime-imethod-fix (1.1.1~utopic) utopic; urgency=medium
+
+  * Rebuild for utopic.
+
+ -- Peter Zotov <whitequark@whitequark.org>  Sun, 18 Jan 2015 04:05:37 +0300
+
 sublime-imethod-fix (1.1.1) precise; urgency=medium
 
   * Add proper Conflicts/Replaces dependencies.
